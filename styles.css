@@ -19,6 +19,12 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  font-size: Roboto, Arial, sans-serif;
+  font-size: 16px;
+}
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -65,5 +71,109 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 5fr;
+}
+
+.header {
+  background-color: white;
+  box-shadow: 1.5px 3.0px 3.0px hsl(0deg 0% 0% / 0.45);
+  grid-area: 1 / 2 / 2 / 2;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+
+.header-top-row {
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr 2fr 3fr;
+}
+
+.header-bottom-row {
+  display: grid;
+  grid-template-columns: 1fr 6fr 5fr;
+}
+
+.greeting-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.buttons-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.sidebar {
+  grid-area: 1 / 1 / 3 / 2;
+  background-color: #1992D4;
+  display: grid;
+  grid-template-rows: 2fr 4fr 9fr;
+}
+
+.sidebar-logo-title {
+  border: 1px solid lightgrey;
+}
+
+.sidebar-menu-items {
+  border: 1px solid lightgrey;
+}
+
+.sidebar-config-items {
+  border: 1px solid lightgrey;
+}
+
+.content-area {
+  grid-area: 2 / 2 / 3 / 3;
+  background-color: #E2E8F0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.projects-area {
+  grid-area: 1 / 1 / 2 / 2;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.announce-trending-area {
+  grid-area: 1 / 2 / 3 / 3;
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr 4fr;
+}
+
+.projects-area .content-title {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.project-cards {
+  grid-area: 2 / 1 / 3 / 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.project-card {
+  border-radius: 10px;
+  height: 200px;
+  margin: 20px;
+  background-color: white;
+  box-shadow: 2.0px 4.0px 4.0px hsl(0deg 0% 0% / 0.44);
+}
+
+.announcements-card {
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 2.0px 4.0px 4.0px hsl(0deg 0% 0% / 0.44);
+}
+
+.trending-card {
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 2.0px 4.0px 4.0px hsl(0deg 0% 0% / 0.44);
 }
 
